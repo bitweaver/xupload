@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<title>File upload status</title>
+    <TMPL_VAR js>
+	<style><TMPL_VAR css></style>
+</head>
+
+
+<body topmargin=0 leftmargin=0  MARGINHEIGHT=0 MARGINWIDTH=0>
+
+<div id="container">
+	<h1>file upload status</h1>
+	
+	<div class="bar1" align="left">
+		<div class="bar2" id="upload_status"></div>
+	</div>
+	
+	<div class="data">
+		<div id="complete" class="row">
+			<div class="label">upload complete</div>
+			<div class="value"><TMPL_VAR percent_completed></div>
+		</div>
+		<div id="numfiles" class="row">
+			<div class="label">files uploaded:</div>
+			<div class="value"><TMPL_VAR files_uploaded> of <TMPL_VAR files_total></div>
+		</div>
+		<div id="position" class="row">
+			<div class="label">current position:</div>
+			<div class="value"><TMPL_VAR data_uploaded> / <TMPL_VAR data_total> Kbytes</div>
+		</div>
+		<div id="uploadspeed" class="row">
+			<div class="label">Approx. speed:</div>
+			<div class="value"><TMPL_VAR speed> Kbytes/Sec.</div>
+		</div>
+	
+		<div id="timespent" class="row">
+			<div class="label">time spent:</div>
+			<div class="value"><TMPL_VAR time_spent></div>
+		</div>
+		<div id="timeleft" class="row">
+			<div class="label">time left:</div>
+			<div class="value"><TMPL_VAR time_left></div>
+		</div>
+	</div>
+	<TMPL_UNLESS inline>
+    <div id="settings"><input type="checkbox" name="close_finished" value="1" id="close_finished" onClick="setCookie( 'close_finished', this.checked+'' );"><label FOR="close_finished" ACCESSKEY="X">Close pop-up when finished</label></div>
+    </TMPL_UNLESS>
+
+	<div id="message" class="message"></div>
+
+	<div id="close">
+		<a href="javascript: window.close();">close this window</a>
+	</div>
+
+</div>
+<Script>SetUpSettings();</Script>
+</body>
+</html>

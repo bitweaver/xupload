@@ -1,0 +1,12 @@
+#PerlHandler Apache::Registry
+<Files *.cgi>
+    SetHandler perl-script
+    PerlResponseHandler ModPerl::Registry
+    PerlOptions +ParseHeaders
+    Options +ExecCGI
+#SetHandler perl-script
+#PerlSendHeader On
+#PerlSendHeader On
+#Options +ExecCGI
+</Files>
+

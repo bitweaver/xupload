@@ -1,0 +1,31 @@
+XUpload script installation (version 2.5 26-Jan-2006)
+NOTE: this script will not work properly on Windows servers!
+
+1) Copy all files except "upload_form.html" to your cgi-bin folder (or folder where perl scripts running)
+   Copy "upload_form.html" into your htdocs folder.
+
+2) Create 2 new folders in cgi-bin for temp files and for finished uploads. 
+   CHMOD them to 777 or 755 (script should have access to write into these 
+   folders).
+
+3) Modify XUploadConfig.pm file with your server details.
+
+4) Edit upload_form.html: change URL-TO-SCRIPT to your scripts folder URL in 3 places.
+
+That's all! Now you can go to www.yoursite.com/.../upload_form.html and start 
+uploading files with XUpload.
+
+-=[Themes]=-
+You can create your own status window themes. Just use the same tags(<TMPL_VAR XXX>) from original theme file(default.html), put new file 
+to Templates folder, add Theme name to XUploadConfig.pm and set value of hidden field "tmpl_name" to a name of new Theme in the upload_form.html
+
+-=[Styles]=-
+You can create your own styles too. Create new file in Styles folder, add name of new style to XUploadConfig.pm and specify it in the upload_form.html
+
+Feel free to request new features and send us your own cool templates/styles.
+
+Good luck!
+
+
+info@sibsoft.net
+www.sibsoft.net

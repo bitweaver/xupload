@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<title>File upload status</title>
+	<TMPL_VAR js>
+	<Style>
+    .percent {position: absolute; left: 155px; top: 6px; font: bold 13px Arial;}
+    <TMPL_VAR css>
+    </Style>
+</head>
+
+
+<BODY topmargin=2 leftmargin=2  MARGINHEIGHT=0 MARGINWIDTH=0>
+<div class="bar1" align=left><div class="bar2" id="upload_status"></div></div>
+<Center>
+<br>
+<Table cellpadding=2 cellspacing=1 class="data">
+<TR>
+   <TD><b>Current position:</b></TD>
+   <TD align=center><TMPL_VAR data_uploaded> / <TMPL_VAR data_total> Kbytes</TD>
+</TR>
+<TR>
+   <TD><b>Approx. speed:</b></TD>
+   <TD align=center><TMPL_VAR speed> Kbytes/Sec.</TD>
+</TR>
+<TR>
+   <TD><b>Time left:</b></TD>
+   <TD align=center><TMPL_VAR time_left></TD>
+</TR>
+</Table>
+<TMPL_UNLESS inline>
+    <div id="settings"><input type="checkbox" name="close_finished" value="1" id="close_finished" onClick="setCookie( 'close_finished', this.checked+'' );"><label FOR="close_finished" ACCESSKEY="X">Close pop-up when finished</label></div>
+</TMPL_UNLESS>
+
+<font class="message" id="message"></font>
+
+<TMPL_UNLESS inline>
+<a href="javascript: window.close();" class="myLink">- Close -</a>
+</TMPL_UNLESS>
+<div class="percent"><TMPL_VAR percent_completed></div>
+<Script>SetUpSettings();</Script>
+</BODY>
+</HTML>

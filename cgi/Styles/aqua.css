@@ -1,0 +1,7 @@
+body  {background-color: #1FD4FB; font: 12px Arial;}
+.data {background-color: #52E9FF; border: 1px solid #1F8799; width: 90%; margin-bottom: 5px;}
+.data TR TD {background-color: #32E0FF; font: 13px Arial;}
+.bar1 {border: 1px solid #505050; background-color: #1DCBF2; text-align: left; vertical-align: middle; height: 20px;}
+.bar2 {width: 1%; background-color: #18ABCC; height: 100%; text-align: left;}
+.message {font: 13px Arial;}
+.myLink  {font: bold 13 px Arial; color: #303030; text-decoration: none;}
