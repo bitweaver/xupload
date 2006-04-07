@@ -16,18 +16,18 @@ our $c=
  target_dir      => '/tmp/xupload/uploads',
 
  # Path to the template using for upload status window
- templates_dir   => '/home/viovio/bwHEAD/xupload/cgi/Templates',
+ templates_dir   => '/path/to/bitweaver/xupload/cgi/Templates',
 
  # Allowed file extensions delimited with '|'
  ext_allowed     => 'jpg|jpeg|gif|png|rar|zip|mp3|avi|txt|csv|rpm',
 
  # URL to send all input values from upload page
  # This setting can be submitted from HTML form, then it will have priority
- url_post        => 'http://test.boo.viovio.com/xupload/cgi/post.cgi',
+ url_post        => 'http://www.yoursite.com/xupload/cgi/post.cgi',
 
  # The link to redirect after complete upload
  # This setting can be submitted from HTML form, then it will have priority
- redirect_link   => 'http://test.boo.viovio.com/xupload/upload_form.html',
+ redirect_link   => 'http://www.yoursite.com/xupload/upload_form.html',
 
  # Max length of uploaded filenames(without ext). Longer filenames will be cuted.
  max_name_length => 64,

@@ -4,7 +4,8 @@
 use strict;
 use CGI::Carp qw(fatalsToBrowser);
 use CGI qw/:standard/;
-use lib '/home/viovio/test/xupload/cgi';
+use File::Basename;
+use lib dirname(__FILE__);
 use XUploadConfig;
 #$CGI::close_upload_files = $CGI::CLOSE_UPLOAD_FILES = 1; #works for 1 file only (prob:reusing file handler)
 $CGI::POST_MAX = 1024 * $c->{max_upload_size};   # set max Total upload size

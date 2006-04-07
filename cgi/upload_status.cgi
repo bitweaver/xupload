@@ -3,7 +3,8 @@
 ### SibSoft.net (26 Jan 2006) by Art Bogdanov aKa PilgrimX182 <bogdanov@sibsoft.net>
 use strict;
 use CGI::Carp qw(fatalsToBrowser);
-use lib '/home/viovio/test/xupload/cgi';
+use File::Basename;
+use lib dirname(__FILE__);
 use XUploadConfig;
 use HTML::Template;
 use CGI qw/:standard/;
