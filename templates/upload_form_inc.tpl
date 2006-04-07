@@ -1,8 +1,7 @@
-{literal}
 <Script language="JavaScript">
 
-var exts = "jpg|gif|png|bmp|mp3|mpg|mpeg|avi|rar|zip|7z|gz|txt|rpm";
-//var exts = ".*"; //Use this to accept all Extensions
+var exts = "{$gBitSystem->getConfig('xupload_allowable_ext','.*')}";
+{literal}
 
 //- Fix for Netscape 6/Mozilla ------------
 if(typeof HTMLElement!="undefined" && !HTMLElement.prototype.insertAdjacentElement)
@@ -97,7 +96,7 @@ function checkExt(value)
 function addUploadSlot()
 {
   cx++;
-  document.getElementById('slots').insertAdjacentHTML("afterEnd", 'Send file: <input name="userfile'+cx+'" type="file"><br>');
+  document.getElementById('slots').insertAdjacentHTML("afterEnd", '<input name="userfile'+cx+'" type="file"><br>');
 }
 </Script>
 {/literal}

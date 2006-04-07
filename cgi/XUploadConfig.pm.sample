@@ -41,19 +41,4 @@ our $c=
  # Time to keep temp upload files on server, sec (24 hours = 86400 seconds)
  temp_files_lifetime => 864000,
 
- # CSS names
- styles			 => { 'black'   => 'black.css',
-			      'hitech'  => 'hi_tech.css',
-			      'aqua'    => 'aqua.css',
-			      'tiny'    => 'tiny.css',
-                              'contrast'=> 'contrast.css',
-			    },
-
- # Template names
- templates => { 'simple' => 'simple.html',
-                'hitech' => 'hitech.html',
-	        'nice'   => 'nice.html',
-	      },
-};
-
 1;
