@@ -19,14 +19,17 @@ our $c=
  templates_dir   => '/path/to/bitweaver/xupload/cgi/Templates',
 
  # Allowed file extensions delimited with '|'
+ # This list can be set in the XUpload Admin screen from within bitweaver
  ext_allowed     => 'jpg|jpeg|gif|png|rar|zip|mp3|avi|txt|csv|rpm',
 
  # URL to send all input values from upload page
  # This setting can be submitted from HTML form, then it will have priority
+ # This setting will be set by bitweaver
  url_post        => 'http://www.yoursite.com/xupload/cgi/post.cgi',
 
  # The link to redirect after complete upload
  # This setting can be submitted from HTML form, then it will have priority
+ # This setting will be set by bitweaver
  redirect_link   => 'http://www.yoursite.com/xupload/upload_form.html',
 
  # Max length of uploaded filenames(without ext). Longer filenames will be cuted.
@@ -36,9 +39,10 @@ our $c=
  copy_mode       => 'Rename',
 
  # Maximum total upload size in Kbytes
- max_upload_size => 700000000,      
+ max_upload_size => 700000000,
 
  # Time to keep temp upload files on server, sec (24 hours = 86400 seconds)
  temp_files_lifetime => 864000,
+};
 
 1;

@@ -6,6 +6,18 @@ Key software that needs to be isntalled:
 $ yum install mod_perl
 $ yum install perl-HTML-Template
 
+Please consult cgi/XUploadConfig.pm.sample for a sample configuration. Save your copy as cgi/XUploadConfig.pm
+
+
+
+The easiest way to get the CGI part working is by adding:
+
+<dirrectory /var/www/html/head>
+	AllowOverride All
+</directory>
+
+to your apache vhost configuration. This will allow xupload/.htaccess file to take effect and will enable all the CGI requirements for you.
+
 
 
 

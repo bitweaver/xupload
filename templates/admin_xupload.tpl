@@ -9,7 +9,11 @@
 				<div class="row">
 					{formlabel label=`$output.label` for=$item}
 					{forminput}
-						<input type="text" name="{$item}" id="$item" size="25" value="{$gBitSystem->getConfig($item)|escape}" />
+						{if $output.type == 'text'}
+							<input type='text' name="{$item}" id="{$item}" size="40" value="{$gBitSystem->getConfig($item)|escape}" />
+						{else}
+							{html_checkboxes name="$item" values="y" checked=$gBitSystem->getConfig($item) labels=false id=$item}
+						{/if}
 						{formhelp note=`$output.note` page=`$output.page`}
 					{/forminput}
 				</div>

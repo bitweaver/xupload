@@ -1,0 +1,9 @@
+*			{font-family:verdana,'Bitstream Vera Sans',sans-serif;}
+body		{background-color:#eee; padding:0; margin:0;}
+fieldset	{margin:0.5em; border:1px solid #ddd; background-color:#fff;}
+legend		{font-size:1em; padding:0.5em 1em; border:1px solid #ddd; background-color:#fff;}
+.formlabel	{float:left; width:10em; text-align:right;}
+.forminput	{margin-left:10.5em;}
+.bar1		{border: 1px solid #ccc; background-color:#eee; text-align: left; vertical-align: middle; height: 20px; margin:10px 0;}
+.bar2		{width: 1%; background-color: #f80; height:100%; text-align: left;}
+.myLink		{font-weight:bold; color: #303030; text-decoration: none;}

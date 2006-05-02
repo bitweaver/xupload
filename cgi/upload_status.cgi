@@ -21,8 +21,8 @@ my $temp_dir = "$c->{temp_dir}/$sid";
 select(undef, undef, undef,0.7); #Make a pause till upload.cgi create flength file
 
 print"Content-type: text/html\n\n";
-my $css_file = ($c->{styles}->{$css_name} && -e "Styles/".$c->{styles}->{$css_name}) ? $c->{styles}->{$css_name} : 'aqua.css';
-my $tmpl_file = ($c->{templates}->{$tmpl_name} && -e "$c->{templates_dir}/".$c->{templates}->{$tmpl_name}) ? $c->{templates}->{$tmpl_name} : 'hitech.html';
+my $css_file = ($c->{styles}->{$css_name} && -e "Styles/".$c->{styles}->{$css_name}) ? $c->{styles}->{$css_name} : 'bitweaver.css';
+my $tmpl_file = ($c->{templates}->{$tmpl_name} && -e "$c->{templates_dir}/".$c->{templates}->{$tmpl_name}) ? $c->{templates}->{$tmpl_name} : 'bitweaver.html';
 my $css;
 open F, "Styles/$css_file" || die"IO css error";
 $css.=$_ while <F>;

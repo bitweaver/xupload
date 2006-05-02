@@ -1,9 +1,9 @@
 {include file="bitpackage:xupload/upload_form_inc.tpl"}
 
-<form name="F1" enctype="multipart/form-data" method="post" action="/xupload/cgi/upload.cgi?upload_id=" legend="Upload Files" onSubmit="return StartUpload();" target="upload">
-
+{form onSubmit="return StartUpload();" target="upload" action="/xupload/cgi/upload.cgi?upload_id=" enctype="multipart/form-data" name="F1" legend=$xuploadLegend|default:"Upload Files"}
 	{include file="bitpackage:xupload/upload_body_inc.tpl"}
 
-	<input type="submit" value="Upload Files">
-</form>
-
+	<div class="row submit">
+		<input type="submit" value="Upload Files">
+	</div>
+{/form}
