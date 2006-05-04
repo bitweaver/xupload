@@ -1,10 +1,8 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_xupload/admin/admin_xupload_inc.php,v 1.3 2006/05/02 11:24:51 squareing Exp $
+// $Header: /cvsroot/bitweaver/_bit_xupload/admin/admin_xupload_inc.php,v 1.4 2006/05/04 18:44:58 squareing Exp $
 // Copyright (c) 2006 - bitweaver.org
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
-
-require_once( WIKI_PKG_PATH.'BitPage.php' );
 
 $formXuploadFeatures = array(
 	"xupload_allowable_ext" => array(
