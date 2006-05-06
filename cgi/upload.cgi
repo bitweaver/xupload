@@ -173,7 +173,7 @@ sub SaveFile2
 sub DelData
 {
    my ($dir) = @_;
-   opendir(DIR, $dir) || die"Error2: $dir";
+   opendir(DIR, $dir) || die"ERROR $!: $dir";
    my @ff = readdir(DIR);
    closedir(DIR);
    for my $fn(@ff)
