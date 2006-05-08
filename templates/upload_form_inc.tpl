@@ -35,12 +35,12 @@ if(typeof HTMLElement!="undefined" && !HTMLElement.prototype.insertAdjacentEleme
 var UID,NF=0;
 function openStatusWindow() { 
 	if($('popup')) {
-		win1 = window.open('{/literal}{$smarty.const.XUPLOAD_PKG_URL}{literal}cgi/upload_status.cgi?upload_id='+UID+'&num_files='+NF+'&css_name='+$('css_name')+'&tmpl_name='+$('tmpl_name'),'win1','width=340,height=280,resizable=1');
+		win1 = window.open('/cgi-bin/xupload/upload_status.cgi?upload_id='+UID+'&num_files='+NF+'win1','width=340,height=280,resizable=1');
 		win1.window.focus();
 	}
 	if($('inline')) {
 		$('div_inline').style.display='block';
-		self.transfer.document.location='{/literal}{$smarty.const.XUPLOAD_PKG_URL}{literal}cgi/upload_status.cgi?inline=1&upload_id='+UID+'&num_files='+NF+'&css_name='+$('css_name')+'&tmpl_name='+$('tmpl_name');
+		self.transfer.document.location='/cgi-bin/xupload/upload_status.cgi?inline=1&upload_id='+UID+'&num_files='+NF;
 	}
 }
 
@@ -48,10 +48,6 @@ function generateSID() {
 	UID = Math.round(10000*Math.random())+'0'+Math.round(10000*Math.random());
 	var xform=$('xuploadform');
 	xform.action = xform.action.split('?')[0]+'?upload_id='+UID;
-	//for (var i=0;i<document.F1.length;i++) {
-	//    current = document.F1.elements[i];
-	//    if(current.type=='file' && current.value!='')NF++;
-	//}
 }
 
 function StartUpload() {
