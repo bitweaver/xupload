@@ -35,12 +35,12 @@ if(typeof HTMLElement!="undefined" && !HTMLElement.prototype.insertAdjacentEleme
 var UID,NF=0;
 function openStatusWindow() { 
 	if($('popup')) {
-		win1 = window.open('/cgi-bin/xupload/upload_status.cgi?upload_id='+UID+'&num_files='+NF+'win1','width=340,height=280,resizable=1');
+		win1 = window.open('{/literal}{$smarty.const.XUPLOAD_PKG_URL}{literal}cgi/upload_status.cgi?upload_id='+UID+'&num_files=','win1','width=340,height=280,resizable=1');
 		win1.window.focus();
 	}
 	if($('inline')) {
 		$('div_inline').style.display='block';
-		self.transfer.document.location='/cgi-bin/xupload/upload_status.cgi?inline=1&upload_id='+UID+'&num_files='+NF;
+		self.transfer.document.location=('{/literal}{$smarty.const.XUPLOAD_PKG_URL}{literal}cgi/upload_status.cgi?upload_id='+UID+'&num_files=');
 	}
 }
 

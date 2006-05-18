@@ -21,11 +21,12 @@ if( $gBitSystem->isPackageActive( 'xupload' ) ) {
 				$fullname = $_REQUEST['target_dir'].'/'.$xupload[$i];
 				$ext = substr( $xupload[$i], ( strrpos( $xupload[$i], '.' ) + 1 )  );
 				$_FILES[] = array(
-					'type'     => $gBitSystem->lookupMimeType( $ext ),
-					'size'     => filesize( $fullname ),
-					'tmp_name' => $fullname,
-					'name'     => $xupload[$i],
-					'error'    => 0,
+					'type'         => $gBitSystem->lookupMimeType( $ext ),
+					'size'         => filesize( $fullname ),
+					'tmp_name'     => $fullname,
+					'name'         => $xupload[$i],
+					'error'        => 0,
+					'preprocessed' => TRUE,
 				);
 			}
 		}
