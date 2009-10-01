@@ -1,8 +1,8 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_xupload/admin/admin_xupload_inc.php,v 1.4 2006/05/04 18:44:58 squareing Exp $
+// $Header: /cvsroot/bitweaver/_bit_xupload/admin/admin_xupload_inc.php,v 1.5 2009/10/01 13:45:55 wjames5 Exp $
 // Copyright (c) 2006 - bitweaver.org
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
-// Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
+// Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See http://www.gnu.org/copyleft/lesser.html for details.
 
 $formXuploadFeatures = array(
 	"xupload_allowable_ext" => array(
